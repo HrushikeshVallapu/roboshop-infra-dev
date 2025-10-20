@@ -1,5 +1,11 @@
-resource "aws_ssm_parameter" "vpc_id" {
+resource "aws_ssm_parameter" "sg_id" {
   name  = "/${var.project}/${var.environment}/sg_id"
   type  = "String"
   value =  module.frontend.sg_id
+}
+
+resource "aws_ssm_parameter" "bation_sg_id" {
+  name  = "/${var.project}/${var.environment}/bation_sg_id"
+  type  = "String"
+  value =  module.bation.sg_id
 }

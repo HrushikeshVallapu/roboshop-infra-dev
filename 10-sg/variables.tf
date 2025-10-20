@@ -6,10 +6,19 @@ variable "project" {
   default = "roboshop"
 }
 
-variable "sg_name"{
+variable "frontend_sg_name"{
     default = "frontend"
 }
 
-variable "description" {
+variable "frontend_description" {
   default = "created sg for frontend instance"
 }
+
+variable "bation_sg_name"{
+    default = "bation"
+}
+
+variable "bation_description" {
+  default = "created sg for bation instance"
+}
+
