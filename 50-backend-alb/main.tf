@@ -7,6 +7,7 @@ module "backend_alb" {
   create_security_group = false
   security_groups = [local.backend_alb_sg_id]
   internal = true
+
   
   tags = merge(
     local.common_tags,

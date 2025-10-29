@@ -2,7 +2,7 @@ resource "aws_instance" "bation" {
   ami           = data.aws_ami.example.id
   instance_type = var.instance_type
   vpc_security_group_ids = [data.aws_ssm_parameter.bation_sg_id.value]
-  subnet_id = local.public_subnet_ids
+  subnet_id = local.public_subnet_id
 
   tags = merge(
     local.common_tags,
